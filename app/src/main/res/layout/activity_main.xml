@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/mostrarDatosB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/limpiarB"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/numberEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="numero entero"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numberTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/numberEdit"
+        app:layout_constraintStart_toStartOf="@+id/numberEdit"
+        app:layout_constraintTop_toBottomOf="@+id/numberEdit" />
+
+    <EditText
+        android:id="@+id/stringEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Texto"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/numberTxt"
+        app:layout_constraintStart_toStartOf="@+id/numberTxt"
+        app:layout_constraintTop_toBottomOf="@+id/numberTxt" />
+
+    <TextView
+        android:id="@+id/stringTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/stringEdit"
+        app:layout_constraintStart_toStartOf="@+id/stringEdit"
+        app:layout_constraintTop_toBottomOf="@+id/stringEdit" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        app:layout_constraintBottom_toBottomOf="@+id/checkTxt"
+        app:layout_constraintEnd_toEndOf="@+id/stringTxt"
+        app:layout_constraintTop_toTopOf="@+id/checkTxt" />
+
+    <TextView
+        android:id="@+id/checkTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/stringTxt"
+        app:layout_constraintTop_toBottomOf="@+id/stringTxt" />
+
+    <EditText
+        android:id="@+id/numeroDesimalEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="decimal"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/switch1"
+        app:layout_constraintStart_toStartOf="@+id/checkTxt"
+        app:layout_constraintTop_toBottomOf="@+id/checkTxt" />
+
+    <TextView
+        android:id="@+id/decimalTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/numeroDesimalEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/numeroDesimalEdit"
+        app:layout_constraintTop_toBottomOf="@+id/numeroDesimalEdit" />
+
+    <Button
+        android:id="@+id/limpiarB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Limpiar"
+        app:layout_constraintEnd_toStartOf="@+id/mostrarDatosB"
+        app:layout_constraintStart_toStartOf="@+id/decimalTxt"
+        app:layout_constraintTop_toBottomOf="@+id/decimalTxt" />
+
+    <Button
+        android:id="@+id/guardarB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="@+id/limpiarB"
+        app:layout_constraintEnd_toEndOf="@+id/decimalTxt"
+        app:layout_constraintStart_toEndOf="@+id/mostrarDatosB"
+        app:layout_constraintTop_toTopOf="@+id/limpiarB" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+</androidx.constraintlayout.widget.ConstraintLayout>
